@@ -4,7 +4,7 @@ using MelonLoader;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-[assembly: MelonInfo(typeof(AllWalls.AllWallsMod), "Unlock All", "1.0.0", "derrick")]
+[assembly: MelonInfo(typeof(AllWalls.AllWallsMod), "AllWalls", "1.0.1", "derrick")]
 [assembly: MelonGame(null, "Data Center")]
 
 namespace AllWalls
@@ -15,23 +15,18 @@ namespace AllWalls
 		
 		public override void OnInitializeMelon()
 		{
-			MelonLogger.Msg($"{ModName}: Will unlock all walls in all saves.");
+			LoggerInstance.Msg("Will unlock all walls in all saves.");
 		}
 
 		public override void OnUpdate()
 		{
-			var gameManager = MainGameManager.instance;
-			if (gameManager == null || gameManager.loadingFirstTime || gameManager.walls == null)
-			{
-				return;
-			}
-
 			var walls = UnityEngine.Object.FindObjectsOfType<Wall>();
 			if (walls == null || walls.Length == 0)
 			{
 				return;
 			}
 
+			var gameManager = MainGameManager.instance;
 			var originalPrice = gameManager.wallPrice;
 			var unlocked = 0;
 
@@ -57,7 +52,7 @@ namespace AllWalls
 				gameManager.wallPrice = originalPrice;
 			}
 
-			MelonLogger.Msg($"{ModName}: unlocked {unlocked} wall section(s).");
+			LoggerInstance.Msg($"Unlocked {unlocked} wall section{(unlocked != 1 ? "s" : "")}.");
 		}
 	}
 }
