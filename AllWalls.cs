@@ -5,13 +5,14 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 [assembly: MelonInfo(typeof(AllWalls.AllWallsMod), "Unlock All", "1.0.0", "derrick")]
+[assembly: MelonGame(null, "Data Center")]
 
 namespace AllWalls
 {
 	public sealed class AllWallsMod : MelonMod
 	{
 		public const string ModName = "AllWalls";
-
+		
 		public override void OnInitializeMelon()
 		{
 			MelonLogger.Msg($"{ModName}: Will unlock all walls in all saves.");
