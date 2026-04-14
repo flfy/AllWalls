@@ -32,7 +32,7 @@ Data Center/
 ### Prerequisites
 
 - .NET SDK 6.0 or newer.
-- A working **Data Center** install with **MelonLoader** and **DataCenter-RustBridge** already installed.
+- A working **Data Center** install with **MelonLoader** already installed.
 
 ### Setup
 
