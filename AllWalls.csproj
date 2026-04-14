@@ -27,10 +27,6 @@
       <HintPath>$(gamepath)/MelonLoader/net6/0Harmony.dll</HintPath>
       <Private>false</Private>
     </Reference>
-    <Reference Include="DataCenterModLoader">
-      <HintPath>$(gamepath)/Mods/RustBridge.dll</HintPath>
-      <Private>false</Private>
-    </Reference>
     <Reference Include="Il2CppInterop.Common">
       <HintPath>$(gamepath)/MelonLoader/net6/Il2CppInterop.Common.dll</HintPath>
       <Private>false</Private>
@@ -74,7 +70,7 @@
   </ItemGroup>
 
   <Target Name="CopyModToGameMods" AfterTargets="Build">
-    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(gamepath)/Mods/" SkipUnchangedFiles="true" />
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(gamepath)/Mods/" SkipUnchangedFiles="true"/>
   </Target>
 
 </Project>

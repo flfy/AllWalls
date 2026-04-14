@@ -1,11 +1,8 @@
 using Il2Cpp;
 using MelonLoader;
 
-using UnityEngine;
-using UnityEngine.InputSystem;
-
 [assembly: MelonInfo(typeof(AllWalls.AllWallsMod), "AllWalls", "1.0.1", "derrick")]
-[assembly: MelonGame(null, "Data Center")]
+[assembly: MelonGame("Waseku", "Data Center")]
 
 namespace AllWalls
 {

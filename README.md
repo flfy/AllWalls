@@ -1,7 +1,6 @@
 # AllWalls
 
 **AllWalls** is an essential QoL mod for *Data Center*, which aims to automatically unlock all wall sections when loading a game.
-
 ---
 
 ## Features
