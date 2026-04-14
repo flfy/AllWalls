@@ -1,7 +1,7 @@
 using Il2Cpp;
 using MelonLoader;
 
-[assembly: MelonInfo(typeof(AllWalls.AllWallsMod), "AllWalls", "1.0.1", "derrick")]
+[assembly: MelonInfo(typeof(AllWalls.AllWallsMod), "AllWalls", "1.0.2", "derrick")]
 [assembly: MelonGame("Waseku", "Data Center")]
 
 namespace AllWalls
