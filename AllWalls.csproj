@@ -74,8 +74,6 @@
   </ItemGroup>
 
   <Target Name="CopyModToGameMods" AfterTargets="Build">
-    <Delete Files="$(gamepath)/Mods/SFPBoxCleaner.dll" Condition="Exists('$(gamepath)/Mods/SFPBoxCleaner.dll')" />
-    <RemoveDir Directories="$(gamepath)/Mods/SFPBoxCleaner" Condition="Exists('$(gamepath)/Mods/SFPBoxCleaner')" />
     <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(gamepath)/Mods/" SkipUnchangedFiles="true" />
   </Target>
 
